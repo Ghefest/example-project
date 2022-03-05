@@ -1,0 +1,186 @@
+@import "../../scss/main";
+
+.header {
+	padding: 0.3rem 0;
+	position: sticky;
+	top: 0;
+	z-index: 1005;
+	opacity: 0.9;
+	background-color: $more-dark;
+
+	@media (max-width: 991px) {
+		opacity: 1;
+	}
+
+	.navbar {
+		flex-wrap: nowrap;
+	}
+
+	.log_btn_text {
+		padding: 0;
+		margin: 0;
+		font-family: "Manrope";
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 600;
+	}
+
+	.select_item {
+		background-color: #0d173a;
+	}
+
+	.profile {
+		display: flex;
+		align-items: center;
+		.profile_btn {
+			display: flex;
+			align-items: center;
+			background: inherit;
+			outline: 0;
+			border: 0;
+			margin: 0;
+			padding: 0;
+		}
+
+		.name {
+			color: #fff;
+			font-family: "Manrope";
+			font-size: 1rem;
+			font-weight: 600;
+		}
+
+		.avatar_img {
+			border-radius: 50%;
+			height: 45px;
+			width: 45px;
+			margin: 0 0.5rem;
+		}
+
+		.balance {
+			color: $green;
+			font-family: "Manrope";
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 600;
+			margin: 0 0.6rem;
+		}
+
+		@media (max-width: 768px) {
+			.avatar_img {
+				margin: 0 0.2rem;
+			}
+
+			.balance {
+				margin: 0 0.3rem;
+			}
+		}
+	}
+
+	.profile_link {
+		font-family: "Manrope";
+		font-size: 1.125rem;
+		font-style: normal;
+		font-weight: 600;
+	}
+
+	.profile_menu {
+		width: 189px;
+		border-radius: 4px;
+		background: $dark-blue;
+		border: 1px solid $blue;
+
+		.profile_link {
+			color: #fff;
+			padding: 3px 3px;
+			font-size: 1rem !important;
+			font-weight: 500 !important;
+
+			&:hover {
+				background: $linear;
+			}
+		}
+	}
+
+	.nav_link {
+		color: $light-blue;
+		padding: 7px 5px;
+	}
+
+	.active {
+		color: #fff !important;
+		border-bottom: 2px solid $blue;
+		padding-bottom: 5px;
+	}
+
+	@media (max-width: 992px) {
+		.responsive_nav_container {
+			flex-direction: row;
+		}
+
+		.responsive_tablet_nav {
+			position: fixed;
+			width: 100%;
+			height: auto;
+			top: 0;
+			left: 0;
+			padding: 10px 0;
+			background: $dark-blue;
+			z-index: 1001;
+
+			.tablet_navbar {
+				display: flex;
+				justify-content: space-between;
+
+				.close_btn {
+					background: inherit;
+					border: 0;
+					outline: 0;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		.logo {
+			width: 80px;
+			height: 20px;
+		}
+
+		.log_btn {
+			padding: 5px 5px;
+			margin: 0;
+		}
+
+		.responsive_nav_container {
+			width: 100%;
+			max-width: 245px;
+			.nav_link a {
+				font-size: 12px;
+				padding: 7px 2px;
+			}
+		}
+	}
+
+	@media (max-width: 575px) {
+		.logo {
+			margin-left: 0.5rem;
+			width: auto;
+			height: auto;
+		}
+
+		.log_btn {
+			padding: 0.7rem;
+		}
+	}
+}
+
+.select_option_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	span {
+		font-weight: 600;
+		font-size: 16px;
+	}
+}

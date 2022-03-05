@@ -1,0 +1,12 @@
+{
+  "UNCAUGHT_STEAM_ERROR": "Не пойманная ошибка: {message}",
+  "BOT_NOU_FOUND": "Бот с именем {accountName} не найден.",
+  "INVALID_PROXY": "Прокси '{proxy}' не рабочее.",
+  "BOT_DONT_HAVE_ITEMS": "На боте нет {gameName} скинов.",
+  "MA_FILE_SHARED_SECRET_NOT_FOUND": "Не найдено поле shared_secret в мафайле.",
+  "INVALID_MA_FILE": "Некорректный мафайл.",
+  "NO_FREE_BOT": "Нет свободного бота.",
+  "YOU_ARE_TRADE_BANNED": "У вас бан трейда.",
+  "YOU_CANNOT_TRADE": "Вы не можете обмениваться.",
+  "STEAM_ITEM_SERVER_UNAVAILABLE": "Сервер стима не отвечает."
+}

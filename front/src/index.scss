@@ -1,0 +1,35 @@
+@import "scss/main";
+
+.main-container {
+	padding: 0px;
+	margin: 0px;
+}
+
+.color {
+	color: #d8d8d8;
+}
+
+.padding {
+	@include xs {
+		padding-right: 0 !important;
+	}
+}
+
+.ui.top.popup.trade_link:before {
+	background: #010122 !important;
+}
+
+.ui.popup.trade_link:before {
+	position: absolute;
+	content: "";
+	width: 0.71428571em;
+	height: 0.71428571em;
+	background: #fff;
+	transform: rotate(45deg);
+	z-index: 2;
+	box-shadow: 2px 2px 0 0 #0a4eb4 !important;
+}
+
+.ui.loader:after {
+	border-color: #0f5fd8 transparent transparent !important;
+}

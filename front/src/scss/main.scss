@@ -1,0 +1,47 @@
+@import "vars";
+@import "breakpoints";
+@import "shared";
+@import "fonts";
+@import "data-title";
+@import "libs";
+@import "colors";
+@import "media";
+
+html {
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	input,
+	textarea {
+		outline: none;
+	}
+
+	.img-responsive {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		&.img-width {
+			width: 100%;
+		}
+	}
+
+	b,
+	strong {
+		font-weight: bold;
+	}
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

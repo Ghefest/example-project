@@ -1,0 +1,13 @@
+{
+  "name": "pot-back",
+  "version": "1.0.0",
+  "private": "true",
+  "workspaces": [
+    "api",
+    "front",
+    "common"
+  ],
+  "nohoist": [
+    "**/jest"
+  ]
+}

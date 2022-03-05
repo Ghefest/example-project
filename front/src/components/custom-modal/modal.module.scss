@@ -1,0 +1,50 @@
+@import "../../scss//colors";
+
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+
+	z-index: 2002;
+}
+
+.modal_content {
+	position: relative;
+	padding: 2rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	background-color: #010122;
+	border: 1px solid #051e50;
+	border-radius: 10px;
+
+	.close_btn {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+
+		background: inherit;
+		color: #495982;
+
+		outline: 0;
+		border: 0;
+		font-size: 20px;
+
+		transition: 0.2s;
+
+		&:hover {
+			color: rgb(172, 172, 172);
+		}
+	}
+}
+
+@media (max-width: 475px) {
+	.modal_content {
+		padding: 1rem;
+	}
+}

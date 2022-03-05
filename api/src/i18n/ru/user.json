@@ -1,0 +1,7 @@
+{
+  "USER_NOT_FOUND": "Пользователь не найден.",
+  "REFERRAL_CODE_MUST_BE_UNIQUE": "Реф. код должен быть уникальным.",
+  "REFERRER_NOT_FOUND": "Реферальный код недействительный",
+  "YOU_ARE_ALREADY_REFERRAL": "Невозможно сменить реферала",
+  "INVALID_TRADE_OFFER_LINK": "Неверная ссылка"
+}

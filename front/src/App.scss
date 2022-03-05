@@ -1,0 +1,328 @@
+$ui-form-color: #15171a;
+$table-bg-color: #4a4a4aab;
+$inputs-color: #1c1e20;
+$text-color: #cccccc;
+$focus-input: #6f6c6c4f;
+
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $ui-form-color;
+}
+
+.ui.header {
+	color: $text-color;
+	background-color: $ui-form-color;
+}
+
+.ui.form {
+	color: $text-color;
+	background-color: $ui-form-color !important;
+	& textarea {
+		background-color: $inputs-color;
+	}
+	& input {
+		background-color: $inputs-color;
+	}
+}
+
+.ui.input {
+	background-color: $inputs-color !important;
+	border: none !important;
+}
+
+.ui.table {
+	background-color: $inputs-color;
+	color: $text-color;
+}
+
+table {
+	user-select: text;
+}
+
+th {
+	background-color: $inputs-color !important;
+	color: $text-color !important;
+	border-color: $table-bg-color !important;
+}
+
+tr {
+	background-color: $inputs-color;
+	color: $text-color;
+	border-color: $table-bg-color !important;
+}
+
+td {
+	border-color: $table-bg-color !important;
+}
+
+input {
+	background-color: $inputs-color !important;
+	color: $text-color !important;
+	&:focus {
+		border-color: $focus-input !important;
+	}
+}
+
+label {
+	color: $text-color !important;
+}
+
+.ui.toggle.checkbox input:focus:checked ~ .box,
+.ui.toggle.checkbox input:focus:checked ~ label {
+	color: $text-color !important;
+}
+
+.ui.labeled.button > .label {
+	background-color: inherit !important;
+	color: #fff;
+	font-size: 1em;
+}
+
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn {
+	color: #08306c !important;
+}
+
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
+	border: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle .ui.multiple.dropdown {
+	background-color: #0f0f2d !important;
+	border: 2px solid #0f5fd8 !important;
+	color: #0f5fd8 !important;
+	box-shadow: none;
+}
+
+.ui.toggle.checkbox input:checked ~ label {
+	color: $text-color !important;
+}
+
+.ui.selection.dropdown {
+	color: $text-color !important;
+	background-color: $inputs-color;
+}
+
+.ui.selection.active.dropdown {
+	color: $text-color !important;
+	border-color: $focus-input !important;
+}
+
+.ui.selection.active.dropdown:hover {
+	color: $text-color !important;
+	border-color: $focus-input !important;
+}
+
+.ui.selection.active.dropdown:active {
+	color: $text-color !important;
+	border-color: $focus-input !important;
+}
+
+.ui.selection.dropdown .menu > .item {
+	color: $text-color !important;
+	border-color: $inputs-color !important;
+	background-color: $inputs-color !important;
+}
+
+.ui.selection.dropdown .menu > .item {
+	color: $text-color;
+}
+
+// My code
+
+@import "./scss/main";
+
+@media (min-width: 1300px) {
+	.container {
+		max-width: 1210px !important;
+	}
+}
+
+.App {
+	background: #000014 url("./images/all/bg.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+// Emphasize
+.strip {
+	margin-top: 10px;
+	height: 4px;
+	background: #0f5fd8;
+	box-shadow: 0px 0px 10px 3px rgba(15, 95, 216, 0.25);
+	border-radius: 20px 20px 2px 2px;
+}
+
+// Retreat
+.retreat {
+	padding-top: 3.5em;
+}
+
+// Titles and subtitles
+.title {
+	color: white;
+	font-family: "Manrope";
+	font-weight: 800;
+	font-size: 2.25em;
+}
+
+.title_lower {
+	margin: 0;
+	font-family: "Manrope";
+	font-weight: 600;
+	font-size: 1.25rem !important; // 20px
+	color: #ffffff;
+}
+
+.subtitle {
+	margin: 0;
+	font-family: "Manrope";
+	font-weight: 400;
+	font-size: 18px !important;
+	color: $light-blue;
+}
+
+.subtitle_lower {
+	font-weight: 400;
+	font-family: "Manrope";
+	font-size: 1rem !important;
+	color: $light-grey;
+}
+
+.text {
+	font-family: "Manrope";
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: #08306c;
+}
+
+.text_lower {
+	font-family: "Manrope";
+	font-size: 0.75rem;
+	font-weight: 600;
+	color: $less-blue;
+}
+
+.comments_text {
+	font-family: "Manrope";
+	font-size: 1rem;
+	font-style: normal;
+	color: $grey;
+}
+
+@media (max-width: 992px) {
+	.title {
+		font-size: 2em !important;
+	}
+
+	.title_lower {
+		font-size: 1rem !important;
+	}
+
+	.subtitle {
+		font-size: 16px !important;
+	}
+
+	.subtitle_lower {
+		font-size: 0.75em !important;
+	}
+
+	.text {
+		font-size: 0.75em !important;
+	}
+
+	.comments_text {
+		font-size: 0.75em !important;
+	}
+}
+
+// Cookie
+.cookie_container {
+	align-items: center !important;
+
+	.cookie_btn {
+		color: #fff !important;
+		background-color: $blue !important;
+		font-size: 1rem;
+		font-weight: bold;
+		border-radius: 5px !important;
+	}
+
+	.cookie_content {
+		display: flex;
+		align-items: center !important;
+		justify-content: space-between !important;
+	}
+
+	@media (max-width: 1140px) {
+		.cookie_term_btn {
+			font-size: 0.6rem !important;
+		}
+	}
+}
+
+// Checkboxes
+.ui.checkbox .box:before,
+.ui.checkbox label:before {
+	width: 19px !important;
+	height: 19px !important;
+	border: 2px solid #08306c !important;
+	border-radius: 3px !important;
+	background-color: $dark !important;
+}
+
+.ui.checkbox input:checked ~ .box:after,
+.ui.checkbox input:checked ~ label:after {
+	width: 19px;
+	height: 19px;
+	border: 1px solid $blue !important;
+	border-radius: 3px !important;
+	background-color: $blue !important;
+}
+
+.ui.checkbox input:checked ~ .box:after,
+.ui.checkbox input:checked ~ label:after {
+	color: #fff !important;
+	font-size: 12px;
+}
+
+// Pagination styles
+.pagination_btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none;
+}
+
+.pagination_btn a {
+	padding: 2px 10px;
+	border-radius: 5px;
+	margin: 5px;
+	border: 2px solid #08306c;
+	color: #08306c !important;
+	cursor: pointer;
+}
+
+.pagination_active a {
+	border-color: $blue;
+	color: #fff !important;
+}
+
+.pagination_prev_btn,
+.pagination_next_btn {
+	transition: 0.2s;
+
+	&:hover {
+		color: $blue !important;
+		border-color: $blue;
+	}
+}

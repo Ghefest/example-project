@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    env_file: ./api/.env
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    depends_on:
+      - redis
+      - db
+    links:
+      - redis
+      - db
+
+  redis:
+    image: redis:5
+
+  db:
+    image: postgres:12
+    env_file: ./api/.env
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+      PG_DATA: /var/lib/postgresql/data
+    ports:
+      - ${DB_PORT}
+    volumes:
+      - pot-back:/var/lib/postgresql/data
+
+volumes:
+  pot-back:

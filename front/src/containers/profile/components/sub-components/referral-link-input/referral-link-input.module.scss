@@ -1,0 +1,36 @@
+@import "../../../../../scss//colors";
+
+.input_container {
+	position: relative;
+}
+
+.input {
+	width: 100%;
+	padding-left: 0.5rem;
+	border: 1px solid $blue;
+	color: $blue !important;
+	background-color: $dark-blue !important;
+	transition: 0.4s;
+	height: 35px;
+	border-radius: 3px;
+
+	&::placeholder {
+		color: $blue !important;
+		transition: 0.4s;
+	}
+
+	&:focus {
+		border-color: $grey !important;
+		color: $grey !important;
+
+		&::placeholder {
+			color: $grey !important;
+		}
+	}
+}
+
+.copy_btn {
+	position: absolute;
+	top: 2px;
+	right: 0;
+}

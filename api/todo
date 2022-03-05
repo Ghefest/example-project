@@ -1,0 +1,107 @@
+✔ dockerfile @done(21-04-02 00:49)
+✔ docker compose @done(21-04-02 00:49)
+
+I18N:
+  ✔ setup @done(21-04-01 16:59)
+Auth:
+  ✔ via steam @done(21-04-01 16:26)
+  ✔ change steam account @done(21-04-01 16:26)
+  ✔ logout @done(21-04-01 16:26)
+  ✔ redirect on auth, change steam account @done(21-04-12 01:35)
+Steam Bot:
+  ✔ add bot (log, pass, maFile, proxy) @done(21-04-10 23:45)
+  ✔ save bot cookie on login @done(21-04-13 01:52)
+  ✔ on login check if have tf2 items @done(21-04-16 01:49)
+  ✔ add tf2 item to trade @done(21-04-16 01:53)
+  ✔ get inventory items @done(21-04-16 02:14) (add endpoint in admin)
+  ✔ deactivate @done(21-04-16 15:32)
+  ✔ on login save tradeOfferUrl @done(21-04-16 15:58)
+Sell:
+    ☐ emit statuses by socket
+    step 1, user creating trade:
+      ✔ check if user have tradeOfferLink @done(21-04-13 15:53)
+      ✔ check if prices havent changed @done(21-04-13 15:53)
+      ✔ check if user dont have another opened sell @done(21-04-13 15:54)
+      ✔ add items to sell entity @done(21-04-13 15:54)
+    step 2, support accepting/declining trade:
+      ✔ support accept trade @done(21-04-13 16:48)
+      step 2A.1, support accepted trade:
+        ✔ get free bot @done(21-04-13 20:25)
+        ✔ link bot @done(21-04-13 20:25)
+      step 2A.2, linked bot:
+        ✔ send trade offer, save trade id to entity @done(21-04-13 21:42)
+        ✔ change status to waiting user trade offer accept @done(21-04-13 21:42)
+        ✔ start job to cancel trade if not accepted @done(21-04-13 22:02)
+        ✔ add job to poll for trade accept every 30 seconds @done(21-04-13 22:36)
+      step 2A.3, after user accept:
+        ☐ check if all items present
+        ☐ deactivate bot, save tradehold date exp
+        ☐ payout to user, change status
+      
+        ☐ support decline trade
+      step 2B.1, support declined trade:
+    step 3, user accepted:
+      ☐ payout to user
+      step 3A, payout accepted: 
+      step 3B, payout declined:
+        ☐ notify 
+
+    ☐ on accept check all items
+    ☐ payout to user, on error ping admin
+    ☐ deactivate bot, save tradehold date expiration
+
+User:
+  ✔ change trade offer link @done(21-04-01 16:26)
+  ✔ change email @done(21-04-01 16:26)
+  ✔ change telegram tag @done(21-04-01 16:26)
+  ✔ change username @done(21-04-01 16:26)
+  ✔ roles (User, Creator, Admin, General Support, Support, SEO) @done(21-04-01 17:17)
+  Load inventory:
+    ✔ save to db (csgo+, dota2+) @done(21-04-09 01:44)
+    ✔ on get add price to every item by formula, blacklist, and in range @done(21-04-09 21:16)
+    ☐ includes bonus to item price
+    ✔ add stickers/gems to items @done(21-04-11 17:50)
+    ✔ reload inventory @done(21-04-09 23:25)
+    ✔ get items of all games or by one @done(21-04-12 17:39)
+Bonus:
+  ✔ store bonus levels as object @done(21-04-17 03:05)
+  ☐ add endpoint in user module to get bonus info
+  ☐ add discount to item price formula
+Steam market prices:
+  ✔ search by price (lower than, higher than) @done(21-04-03 21:09)
+  ✔ search item by name @done(21-04-01 20:52)
+  ✔ edit item price by name @done(21-04-01 19:19)
+  fetch prices queues:
+    ✔ csgo, dota2, tf2 @done(21-04-01 16:29)
+    ✔ start job from previous progress if something happend to process @done(21-04-01 16:29)
+    ✔ add new job to queue for fetching via api @done(21-04-02 00:15)
+    ✔ get active jobs @done(21-04-02 00:15)
+Cs Money prices:
+  ✔ search by price (lower than, higher than) @done(21-04-03 21:58)
+  ✔ search item by name @done(21-04-02 15:04)
+  ✔ edit item price by name @done(21-04-02 15:38)
+  fetch prices queues:
+    ✔ add new job to queue for prices update via api @done(21-04-02 20:10)
+    ✔ get active jobs @done(21-04-02 20:26)
+    ☐ make one job which start 10-20 jobs each of them have different rarity + offset + offsetEnd 
+    csgo:
+      ✔ fetch @done(21-04-01 16:57)
+      ✔ start job from previous progress if something happend to process @done(21-04-01 16:29)
+    dota2:
+      fetch:
+        ✔ fetch by rarity @done(21-04-03 17:59)
+        ✔ when fetch sort by price desc @done(21-04-03 17:59)
+        ✔ save on every iteration @done(21-04-03 18:00)
+        ✔ add proxy @done(21-04-03 18:52)
+        ☐ test proxy
+      ✔ start job from previous progress @done(21-04-03 18:45)
+Admin settings:
+  ✔ get @done(21-04-04 02:01)
+  buying only in some range(for example from 5$ to 100$):
+    ✔ set @done(21-04-05 02:34)
+  price formula X: 
+    ✔ set @done(21-04-04 01:42)
+  Banned items:
+    ✔ get all @done(21-04-04 02:15)
+    ✔ add @done(21-04-03 00:10)
+    ✔ remove @done(21-04-03 00:30)

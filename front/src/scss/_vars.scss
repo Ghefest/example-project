@@ -1,0 +1,29 @@
+$default-font: "roboto-example", sans-serif;
+$accent: orange;
+$text: #333;
+
+$blue-color: #1678c2;
+$green-color: #69f0ae;
+$main-bg-color: #26262c;
+$second-bg-color: #1c1c22;
+$main-content-color: #333333;
+$form-color: #d8d8d8;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 20px;
+$grid-columns: 12;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+$gutter: $grid-gutter-width;

@@ -1,0 +1,10 @@
+@import "../../../../../scss/main";
+
+.invited_user {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.6rem 0.5rem;
+	background-color: $dark-blue;
+}

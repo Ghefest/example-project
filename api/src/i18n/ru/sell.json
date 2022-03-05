@@ -1,0 +1,8 @@
+{
+  "NO_TRADE_LINK": "Укажите трейд ссылку.",
+  "PRICES_CHANGED": "Цены изменились. Обновите инвентарь.",
+  "YOU_ALREADY_HAVE_ACTIVE_SELL": "У вас уже есть открытая сделка.",
+  "CANNOT_CANCEL_SELL": "todo",
+  "SELL_NOT_FOUND": "Сделка не найдена",
+  "SALES_TEMPORARILY_DISABLED": "Продажи временно отключены."
+}

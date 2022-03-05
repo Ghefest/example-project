@@ -1,0 +1,299 @@
+@import "../../scss/main";
+
+// animation
+@keyframes blink {
+	0% {
+		opacity: 0.2;
+	}
+	20% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.2;
+	}
+}
+
+.notification_text_box {
+	display: flex;
+	align-items: center;
+
+	.text {
+		width: 100%;
+		max-width: 370px;
+
+		font-family: "Manrope";
+		font-size: 14px;
+
+		font-style: normal;
+		font-weight: 500;
+		margin: 0 !important;
+		text-align: right;
+
+		@media (max-width: 991px) {
+			margin-right: 0;
+			font-size: 12px;
+			text-align: left;
+		}
+	}
+
+	.icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	@media (max-width: 567px) {
+		margin-top: 1rem;
+		.text {
+			margin-top: 1rem;
+			text-align: left;
+		}
+	}
+}
+
+.progress_deal_box {
+	position: relative;
+	margin-top: 3rem !important;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	@media (max-width: 477px) {
+		width: 300px;
+	}
+	@media (max-width: 425px) {
+		margin-left: 1rem;
+		width: 270px;
+	}
+
+	.deal_progress {
+		width: 100%;
+		height: 10px;
+		background-color: $dark;
+		border: 3px solid $dark-blue;
+	}
+
+	.circle {
+		position: absolute;
+		top: -3px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 3px solid $dark-blue;
+		background-color: #08306c;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.circle_title {
+			margin-top: 3.5rem;
+			width: 200px;
+			color: #08306c;
+			font-family: "Manrope";
+			font-size: 14px;
+			margin-left: 2rem;
+			@media (max-width: 768px) {
+				display: none;
+			}
+		}
+	}
+
+	.mobile_circle_title {
+		display: none;
+
+		margin-top: 2rem;
+		text-align: center;
+		color: #007bff;
+		font-weight: bold;
+		font-family: "Manrope";
+		font-size: 14px;
+		@media (max-width: 768px) {
+			display: block;
+		}
+	}
+}
+
+.waiting_deal_box {
+	margin-top: 5rem !important;
+	.content_box {
+		margin-top: 3rem;
+		width: 100%;
+		min-width: 780px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center !important;
+		@media (max-width: 767px) {
+			min-width: auto;
+		}
+		@media (max-width: 576px) {
+			margin-top: 1rem;
+			flex-direction: column;
+		}
+	}
+	.title {
+		width: 100%;
+		max-width: 500px;
+		font-weight: normal;
+		@media (max-width: 991px) {
+			text-align: left;
+			max-width: 370px;
+		}
+	}
+	@media (max-width: 768px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 1rem !important;
+	}
+}
+
+.confirm_deal_box {
+	.confirm_deal_main {
+		margin-top: 4rem !important;
+
+		display: flex;
+		justify-content: space-between;
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			margin: 0 3rem;
+
+			.steam_confirm_box {
+				margin-top: 3.5rem;
+				display: flex;
+				flex-direction: column;
+
+				.confirm_table {
+					margin: 0.5rem 0;
+					display: flex;
+					justify-content: space-between;
+				}
+
+				.bot_for_sell {
+					cursor: pointer;
+				}
+
+				.btn_box {
+					margin-top: 3rem;
+					@media (max-width: 477px) {
+						margin-top: 1.5rem;
+					}
+				}
+
+				@media (max-width: 768px) {
+					margin-top: 1.5rem;
+				}
+			}
+		}
+
+		@media (max-width: 769px) {
+			margin-top: 2rem !important;
+			.mobile_content {
+				display: none;
+			}
+		}
+
+		@media (max-width: 576px) {
+			margin-top: 2rem !important;
+		}
+	}
+
+	.confirm_deal_footer {
+		margin-top: 1rem;
+		width: 100%;
+		border-top: 3px solid $dark-blue;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
+		.footer_content {
+			margin-top: 2rem;
+			@media (max-width: 477px) {
+				margin-top: 1rem;
+			}
+
+			.time {
+				margin: 0;
+				padding-right: 1rem;
+				color: #08306c;
+				font-family: "Manrope";
+				font-size: 36px;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.ending_deal_box {
+	margin-top: 5rem !important;
+	display: flex;
+	flex-direction: column;
+	width: 991px;
+
+	@media (max-width: 1200px) {
+		width: 768px;
+	}
+	@media (max-width: 991px) {
+		width: 567px;
+	}
+	@media (max-width: 567px) {
+		width: 377px;
+	}
+	@media (max-width: 425px) {
+		margin-top: 2rem !important;
+		width: 320px;
+	}
+
+	.title span {
+		font-size: 2.2rem;
+		animation-name: blink;
+		animation-duration: 1.4s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: both;
+	}
+
+	.title span:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
+	.title span:nth-child(3) {
+		animation-delay: 0.4s;
+	}
+}
+
+.finished_deal_box {
+	margin-top: 5rem !important;
+	display: flex;
+	flex-direction: column;
+	width: 991px;
+
+	@media (max-width: 1200px) {
+		width: 768px;
+	}
+	@media (max-width: 991px) {
+		width: 567px;
+	}
+	@media (max-width: 567px) {
+		width: 377px;
+	}
+	@media (max-width: 425px) {
+		margin-top: 2rem !important;
+		width: 320px;
+	}
+
+	.content {
+		margin-top: 2rem;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+}
